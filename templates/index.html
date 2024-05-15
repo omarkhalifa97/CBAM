@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Carbon Vista | Home</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="./static/images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./static/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./static/images/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="./static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="./static/assets/css/noscript.css" /></noscript>
+		
+		<style>
+select{
+  background-color: gray;
+}
+option{
+  color: yellow;
+}
+
+			#loading,
+			#results {
+			  display: none;
+			}
+			#loading {
+			  width: 100%;
+			}
+		div {
+        margin-bottom: 10px;
+      }
+      label {
+        display: inline-block;
+        width: 150px;
+input, label {
+    display:block;
+}
+      }
+
+		  </style>
+	</head>
+	<body class="is-preload">
+		
+
+		<!-- Header -->
+			<section id="header">
+				
+
+                
+				<div class="inner">
+					
+					<!-- <span class="icon solid major fa-cloud"></span> -->
+					<img src="./static/images/logo2.png" alt="Digital Experts">
+
+					<h1><strong>EGYTRACE</strong> Systems<br />
+					</h1>
+					<p>What is your CBAM tax cost</p>
+					<ul class="actions special">
+						<li><a href="#two" class="button scrolly">Calculate</a></li>
+					</ul>
+				</div>
+			</section>
+
+		
+
+		<!-- Two -->
+<section id="two" class="main style2">
+				<div class="container">
+					<div class="row gtr-150">
+						<div class="col-6 col-12-medium">
+							<ul class="major-icons">
+								<li><span class="icon solid style1 major fa-code"></span></li>
+								<li><span class="icon solid style2 major fa-bolt"></span></li>
+								<li><span class="icon solid style3 major fa-camera-retro"></span></li>
+								<li><span class="icon solid style4 major fa-cog"></span></li>
+								<li><span class="icon solid style5 major fa-desktop"></span></li>
+								<li><span class="icon solid style6 major fa-calendar"></span></li>
+							</ul>
+						</div>
+						<div class="col-6 col-12-medium">
+							</head>
+							<body class="bg-dark">
+							  <div class="container">
+								<div class="row">
+								  <div class="col-lg-6 mx-auto">
+									<div class="card card-body text-center mt-5">
+			
+									  <h1 class="heading display-5 pb-3">CBAM Tax Calculator</h1>
+									  <form action="submit" method="post" class="reveal-content">
+
+
+
+ 
+<div style="float:left;margin-right:20px;">
+<label for ="start" style="color:white;">Total Production:    </label>
+                    <input name="total" type="number" id="name" value="" name="name" placeholder="Total Production Amount" style="width: 220px;">
+
+</div>
+<strong for="name">Tonne</strong>
+<div class="col-sm-10">
+
+</div>
+
+<div class="col-sm-10">
+<label for ="start" style="color:white;">Carbon Credit Price:   </label>
+
+                    <input name="cost" type="number" id="cost" placeholder="Cost" style="width: 220px; position:relative; left:0px;"/>
+<strong for="cost" style="position:relative; left:390px; top: -50px;">Euro/Tonne</strong>
+
+
+</div>
+
+<label style="color:white;">Select Fertilizer:</label>
+<select name="colour" class="list1" method="GET" action="/" >
+  <option value="{{colours[0]}}" selected>{{colours[0]}}</option>
+  {% for colour in colours[1:] %}
+    <option value="{{colour}}">{{colour}}</option>
+  {% endfor %}
+</select>
+<br>
+<div class="col-sm-10">
+<label style="color:white;">Start date:</label>
+<input type="date" id="start" name="start">
+</div>
+<div class="col-sm-10">
+<label style="color:white;">End date:</label>
+<input type="date" id="End" name="end">
+</div>
+
+
+</style>
+<label for="End" style="color:white;">Factory Name:</label>
+<div class="col-sm-10">
+
+
+                    <input name="fac_name" type="text" placeholder="Name"  style="width: 350px;background-color:gray; position:relative; left:0px;"/>
+
+
+</div>
+<label for="End" style="color:white;">Location:</label>
+<div class="col-sm-10">
+			<input name="loc" type="text" placeholder="Location"  style="width: 350px;background-color:gray; top:0px;"/>
+
+
+</div>
+
+										<input
+											type="submit"
+											value="Create CBAM Report"
+											class="btn btn-dark btn-block"
+											style="position:relative; left:380px;top:-60px;"
+								  />
+
+
+                </form>
+										
+										
+						  <br>
+
+										
+										 
+
+									  <div id="loading">
+										<img src="./images/Loading.png" width = "15%" alt="" />
+									  </div>
+						  
+									  <div id="results" class="pt-4">
+										<h5>Total Carbon Emissions (Pounds of CO2 Emitted / Day):</h5>
+										<div class="form-group">
+										  <div class="input-group">
+											<input
+											  type="number"
+											  class="form-control"
+											  id="total-calories"
+											  disabled
+											  style = "color:white;"
+											/>
+											<br><br>
+											<p>To put that into perspective, all in all, the average American is responsible for about 31 pounds of carbon per day. A major factor for this number is vehicle emissions. If kept under 31 pounds, one can assist in the abating of this issue. </p>
+										  </div>
+										</div>
+									  </div>
+									</div>
+								  </div>
+								</div>
+	
+					  </div>
+				  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+						    
+						  
+							  <!-- Optional JavaScript -->
+							  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+							  <script
+								src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+								integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+								crossorigin="anonymous"
+							  ></script>
+							  <script
+								src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+								integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+								crossorigin="anonymous"
+							  ></script>
+							  <script
+								src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+								integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+								crossorigin="anonymous"
+							  ></script>
+
+							</body>
+						
+						
+						
+						
+						
+				
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+		
+		<!-- Scripts -->
+			<script src="./static/assets/js/jquery.min.js"></script>
+			<script src="./static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="./static/assets/js/browser.min.js"></script>
+			<script src="./static/assets/js/breakpoints.min.js"></script>
+			<script src="./static/assets/js/util.js"></script>
+			<script src="./static/assets/js/main.js"></script>
+			<script src="./static/assets/js/calc.js"></script>
+
+
+	</body>
+</html>
