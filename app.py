@@ -84,8 +84,8 @@ def submit():
         end_date = data['end']
         direct = (int(dict[dropdownval][0])/100)*0.160 + (int(dict[dropdownval][2])/100)*0.178
         indirect = (int(dict[dropdownval][0])/100)*0.028 + (int(dict[dropdownval][2])/100)*0.012
-        total_em = round(direct + indirect,4)*total
-        result = round((direct +indirect)*total*cost,2)
+        total_em = round((direct + indirect)*total,4)
+        result = round(((direct +indirect)*total*cost),2)
         print(f"{start} this is rdddddd")
         desc = ' '.join([str(item) for item in dict[dropdownval]])
         return render_template('result.html',c_tax=result,total_em=total_em,p_name=dropdownval,p_desc=desc,hs=hs_dict[dropdownval][0],id=hs_dict[dropdownval][1],fac_name=fac_name,location=loc,start=start_date,end=end_date)
