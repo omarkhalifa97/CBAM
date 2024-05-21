@@ -11,8 +11,8 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		></script>
-
-
+<button id="download-button">Download as PDF</button>
+		<div id="invoice">
 
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
@@ -34,11 +34,12 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
+
 <body>
 
 
-<button id="download-button">Download as PDF</button>
-		<div id="invoice">
+
 
 								<div class="col-xs-12">
 									<h2 class="title" style="font-size:40px;" align="center">CBAM Report</h2>
@@ -64,6 +65,7 @@
 									<h2 class="title" style="font-size:18px;">    •	Name and location(s): <strong>{{fac_name}}, {{location}}</strong></h2></h2>
 								</div>
 
+
 <div class="col-xs-12">
 <h2 class="title" style="font-size:18px;"><strong>    • Calculation Methodology:</strong></h2>
 
@@ -76,16 +78,22 @@
 </h2>
 								
 								
-<strong style="font-size:18px;">    Results:</strong>
+<strong style="font-size:18px;">    Results:</strong
 <p style="font-size:14px;">   The total embedded carbon emissions for the declared product are as follows:</p>
 </div>
+<div class="col-xs-12">
+									<h2 class="title" style="font-size:14px;">    •	Direct Emission:  <strong>{{direct}}CO2/Tonne</strong></h2></h2>
+								</div>
+<div class="col-xs-12">
+									<h2 class="title" style="font-size:14px;">    •	Indirect Emission:  <strong>{{indirect}}CO2/Tonne</strong></h2></h2>
+								</div>
 
 <div class="col-xs-12">
-									<h2 class="title" style="font-size:22px;">    •	Total CO2e emissions:  <strong>{{total_em}}Tonne</strong></h2></h2>
+									<h2 class="title" style="font-size:18px;">    • Total CO2e emissions:  <strong>{{total_em}}Tonne</strong></h2></h2>
 								</div>
 
 <div class="col-xs-12" align="right">
-									<h2 class="title" align="right" style="font-size:40px;position:relative;left:-100px; top:-28px;">Expected CBAM Tax: <strong>€{{c_tax}}</strong></h2></h2>
+									<h2 class="title" style="font-size:34px;position:relative; top:-150px;">Expected CBAM Tax: <strong>€{{c_tax}}</strong></h2></h2>
 								</div>
 
 
@@ -127,6 +135,7 @@
 
 			button.addEventListener('click', generatePDF);
 		</script>
+
 
 </body>
 </html>
